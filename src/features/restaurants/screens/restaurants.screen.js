@@ -4,18 +4,17 @@ import { Searchbar } from "react-native-paper";
 import { RestaurantInfoCard } from "../components/restaurants-info-card.components";
 
 const SearchContainer = styled(View)`
-  padding: 16px;
+  padding: ${(props) => props.theme.space[3]};
 `;
 
 const SafeArea = styled(SafeAreaView)`
   flex: 1;
-  ${StatusBar.currentHeight && `margintop: ${StatusBar.currentHeight}px`};
+  ${StatusBar.currentHeight && `margin-top: ${StatusBar.currentHeight}px`};
 `;
 
 const RestaurantListContainer = styled(View)`
   flex: 1;
-  padding: 16px;
-  backgroundcolor: blue;
+  padding: ${(props) => props.theme.sizes[1]};
 `;
 
 export const RestaurantsScreen = () => {
